@@ -52,3 +52,29 @@ export const PRIORITY_DOT_CLASS = {
   [PRIORITY_LEVELS.MEDIUM]: "bg-priority-medium",
   [PRIORITY_LEVELS.HIGH]: "bg-priority-high",
 };
+
+export const NAV_VIEWS = {
+  INBOX: "inbox",
+  TODAY: "today",
+  UPCOMING: "upcoming",
+  PROJECTS: "projects",
+};
+
+/**
+ * Ordered list of navigation items.
+ * Icon components are mapped separately in Sidebar to keep
+ * React component imports out of the constants file.
+ */
+export const NAV_ITEMS = [
+  { id: NAV_VIEWS.INBOX, label: "Inbox" },
+  { id: NAV_VIEWS.TODAY, label: "Today" },
+  { id: NAV_VIEWS.UPCOMING, label: "Upcoming" },
+  { id: NAV_VIEWS.PROJECTS, label: "Projects" },
+];
+
+export const EMPTY_STATE_MESSAGES = {
+  [NAV_VIEWS.INBOX]: "Add your first task using the + button.",
+  [NAV_VIEWS.TODAY]: "No tasks due today.",
+  [NAV_VIEWS.UPCOMING]: "No upcoming tasks.",
+  [NAV_VIEWS.PROJECTS]: "No projects yet.",
+};
